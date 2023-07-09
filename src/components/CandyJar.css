@@ -1,0 +1,45 @@
+.jar {
+  text-align: center;
+  padding: 10px;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.circle-container {
+  display: flex;
+  justify-content: center;
+  border: 2px dotted black;
+  width: 30%;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+.circle {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  margin: 5px;
+}
+
+.pink {
+  background-color: #ff69b4;
+}
+
+.green {
+  background-color: yellowgreen;
+}
+
+.purple {
+  background-color: blueviolet;
+}
+
+
+button {
+  margin: 5px;
+  cursor: pointer;
+}
