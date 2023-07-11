@@ -23,7 +23,7 @@ const CandyJar = () => {
 
   return (
     <div className='jar'>
-      <h2>Candy Jar</h2>
+      <h2>V3 - React State Management (Candy Jar)</h2>
       <div className="circle-container">
         {
           Array.from({ length: count }, (_, index) => (

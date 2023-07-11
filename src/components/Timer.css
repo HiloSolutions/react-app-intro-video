@@ -1,0 +1,28 @@
+.container {
+  margin-top: 15px;
+  background-color: #fff;
+  padding: 3rem;
+}
+
+.display {
+  font-size: 48px;
+  padding: 10px;
+  border: 2px solid black;
+  border-radius: 5px;
+  width: 200px;
+  margin: 0 auto;
+}
+
+.button {
+  margin-top: 20px;
+}
+
+.button button {
+  font-size: 24px;
+  padding: 10px 20px;
+  border: none;
+  background-color: #333;
+  color: #fff;
+  cursor: pointer;
+  border-radius: 5px;
+}
