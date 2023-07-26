@@ -4,27 +4,22 @@ import './Timer.css';
 const Timer = () => {
   const [isRunning, setIsRunning] = useState(false);
   const [time, setTime] = useState(0);
-  const [joke, setJoke] = useState(null);
+  const [joke, setJoke] = useState('');
 
-
-  //variables
   const minutes = Math.floor((time % 360000) / 6000);
   const seconds = Math.floor((time % 6000) / 100);
   const milliseconds = Math.round((time % 100) / 10);
 
-  //useEffect hooks
-
-  //responsible for updating the timer's time state at a regular interval when the isRunning state is true.
   useEffect(() => {
-    //The intervalId variable is used to keep track of the interval and is cleared when the component unmounts or when the isRunning or time dependencies change.
-    let intervalId;
-    //It sets up a timer using setInterval and increments the time state by 1 every 10 milliseconds.
+    let intervalID;
+
     if (isRunning) {
-      intervalId = setInterval(() =>  setTime(time + 1), 10); //
+      intervalID = setInterval(() => setTime(prev => prev + 1), 10)
     }
-    //The intervalId variable is used to keep track of the interval and is cleared when the component unmounts or when the isRunning or time dependencies change.
-    return () => clearInterval(intervalId);
-  }, [isRunning, time]);
+
+    return () => clearInterval(intervalID);
+
+  },[time, isRunning])
 
 
   useEffect(() => {
@@ -34,24 +29,28 @@ const Timer = () => {
         let data = await response.json();
         setJoke(data);
       };
-  
+
       if (seconds % 5 === 0 && milliseconds === 0) {
         fetchJoke();
       }
     }
-  }, [isRunning, seconds, milliseconds]);
+  }, [isRunning, seconds, milliseconds])
 
 
+  const handleStart = () => {
+    setIsRunning(true);
+  }
 
-  //event handlers
-  const startAndPause = () => {
-    setIsRunning(prev => !prev);
+  const handlePause = () => {
+    setIsRunning(false);
   }
 
   const handleReset = () => {
     setIsRunning(false);
     setTime(0);
   }
+
+  console.log(joke);
 
   return (
     <div className="container">
@@ -62,11 +61,11 @@ const Timer = () => {
         {milliseconds === 10 ? '0' : milliseconds.toString()}
       </div>
       <div className="button">
-        <button onClick={startAndPause}>Start</button>
-        <button onClick={startAndPause}>Pause</button>
+        <button onClick={handleStart}>Start</button>
+        <button onClick={handlePause}>Pause</button>
         <button onClick={handleReset}>Reset</button>
       </div>
-      {joke && <p>{joke.value}</p>}
+      <p>{joke.value}</p>
     </div>
   );
 };

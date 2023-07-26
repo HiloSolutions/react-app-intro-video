@@ -22,7 +22,7 @@ const CandyJar = () => {
   }
 
   return (
-    <div className='jar'>
+    <div className='card'>
       <h2>V3 - React State Management (Candy Jar)</h2>
       <div className="circle-container">
         {
