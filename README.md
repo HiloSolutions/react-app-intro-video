@@ -1,6 +1,8 @@
 # About this project
 This repository goes alongside my tutorial series for React Basics.
 
+
+
 # Video 1: Setting up a react project
 
 [Click here to watch my YouTube video](https://youtu.be/UOIvmHOS188)
@@ -20,7 +22,9 @@ Specifically, I explain how to:
 * Nest components
 
 
+
 # Video 2: Passing Props
+
 [Click here to watch my YouTube video](https://youtu.be/TSryvbZTGfQ)
 
 Props are the information that you pass to a JSX tag. Their name is short for properties. 
@@ -33,7 +37,9 @@ In this video, I cover:
 * How props change over time
 
 
+
 # Video 3: State Management
+
 [Click here to watch my YouTube video](https://youtu.be/Yrz5JDzM5Fg)
 
 The key difference between state and props is that Props are used for passing data from a parent component to its child components, while state is used for managing internal component data that can change over time.
@@ -49,7 +55,9 @@ So as I go through this lesson, remember that React state is like your candy jar
 
 
 # Video 4: useEffect for asynchronous functionality
+
 [Click here to watch my YouTube video](https://youtu.be/70vVdcFBXq4)
+
 Effects serve as an "escape hatch" when you need to step outside of React's direct control in your components. One common use case for useEffect is handling asynchronous requests like state updates, synchronizing external systems, data fetching, API calls, etc.
 
 In this tutorial, we will make a stopwatch and Ill cover some important concepts like:
@@ -59,16 +67,19 @@ In this tutorial, we will make a stopwatch and Ill cover some important concepts
 * implications of react’s double render in development mode 
 
 
+
 # Video 5: useRef vs. useState for remembering variables accross renders
+
 [Click here to watch my YouTube video](https://youtu.be/KEPgbATM2iQ)
 
 useRef is a versatile hook in React. Ultimately, it is great for When you want a component to “remember” information, but you don’t want that information to trigger new renders. 
 This is because, using the user hook returns a plain javascript object. Whenever you mutate the object to hold a new current value, useRef will return the same object back. Thus, no re-render is triggered.
 
-In this video, we will go over:
+In this video, we will cover:
 * How to implement useref
 * How useRef works
 * Accessing DOM elements with a scroll example
+
 
 
 # Video 6: Folder structure best practices
